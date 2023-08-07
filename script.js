@@ -39,7 +39,7 @@ function submitData() {
       if (document.getElementById("ipk").value < 3) {
         alert("IPK kurang dari ketentuan");
       } else {
-        if (JSON.stringify(getEmail) === localStorage.getItem("email") ||JSON.stringify(getNama) === localStorage.getItem("nama")) {
+        if (JSON.stringify(getEmail) === localStorage.getItem("email") || JSON.stringify(getNama) === localStorage.getItem("nama")) {
           alert("Pendaftar hanya diperbolehkan daftar 1x");
           return; // Stop processing the form submission
         } else {
