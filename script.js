@@ -1,5 +1,5 @@
 function ipkGenerator() {
-  const ipk = [3, 2];
+  const ipk = [3.5, 2.5];
   const randomIPK = Math.floor(Math.random() * ipk.length);
   document.getElementById("ipk").value = ipk[randomIPK];
 }
