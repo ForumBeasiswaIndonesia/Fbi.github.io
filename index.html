@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pendaftaran Beasiswa</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="forma">
+        <img src="Unper.png" style="width: 200px; height: 200px" class="imgs" />
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i>
+          <h2>Daftar Beasiswa</h2>
+        </div>
+        <div class="info">
+          <input
+            class="fname"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full name"
+            onblur="ipkGenerator()"
+            required
+          />
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="number"
+            name="hp"
+            id="hp"
+            placeholder="Phone number"
+            required
+          />
+          <select name="semester" id="semester" required>
+            <option disabled selected hidden>Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <input type="number" name="ipk" id="ipk" required readonly />
+          <select name="beasiswa" id="beasiswa" required>
+            <option disabled selected hidden>Pilihan Beasiswa</option>
+            <option value="Beasiswa Akademik">Beasiswa Akademik</option>
+            <option value="Beasiswa Non-Akademik">Beasiswa Non-Akademik</option>
+          </select>
+          <input
+            type="file"
+            id="berkas"
+            name="berkas"
+            accept=".jpg, .jpeg, .png, .rar, .zip"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          href="/"
+          name="submitData"
+          id="submitData"
+          onclick="submitData()"
+        >
+          Submit
+        </button>
+        <button href="/" style="margin-top: 25px" onclick="hasil()">
+          Hasil
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

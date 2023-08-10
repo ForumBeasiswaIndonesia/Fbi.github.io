@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Pendaftar Beasiswa</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.onload = function () {
+        // Get the value from localStorage
+
+        const allData = JSON.parse(localStorage.getItem("dataHasil")) || [];
+        const tableBody = document
+          .getElementById("dataTable")
+          .getElementsByTagName("tbody")[0];
+
+        allData.forEach((data) => {
+          const dataRow = document.createElement("tr");
+          dataRow.innerHTML = `
+                                <td>
+                                    ${data.dataNama}
+                                </td>
+                                <td>
+                                    ${data.dataEmail}
+                                </td>
+                                <td>
+                                    ${data.dataHp}
+                                </td>
+                                <td>
+                                    ${data.dataSemester}
+                                </td>
+                                <td>
+                                    ${data.dataIpk}
+                                </td>
+                                <td>
+                                    ${data.dataBeasiswa}
+                                </td>
+                                <td>
+                                    ${data.dataBerkas}
+                                </td>
+                                <td>
+                                    ${data.dataStatus}
+                                </td>
+                `;
+          tableBody.appendChild(dataRow);
+        });
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="main-block">
+      <section>
+        <div class="teab">
+          <h1>Data Pendaftar Beasiswa</h1>
+          <table id="dataTable">
+            <div class="tbl-header">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Email</th>
+                  <th>Nomor HP</th>
+                  <th>Semester</th>
+                  <th>IPK</th>
+                  <th>Beasiswa</th>
+                  <th>Berkas Syarat</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+            </div>
+            <div class="tbl-content">
+              <tbody></tbody>
+            </div>
+          </table>
+        </div>
+        <button
+          type="submit"
+          style="margin-top: 20px"
+          name="button1"
+          value="Button1"
+          id="button1"
+          onclick="pindahLaman()"
+        >
+          Back
+        </button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
