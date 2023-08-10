@@ -4,14 +4,11 @@ function ipkGenerator() {
   document.getElementById("ipk").value = ipk[randomIPK];
 }
 
-function pindahLaman() {
-  window.location.href = "laman2.html";
-}
 function pindahIndex() {
   window.location.href = "index.html";
 }
 function hasil() {
-  window.location.href = "laman3.html";
+  window.location.href = "laman2.html";
 }
 
 function submitData() {
